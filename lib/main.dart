@@ -6,6 +6,7 @@ import './widgets/Home.dart'; //
 import './state/index.dart';
 import './lx/dio.dart';
 import './lifeCycle/index.dart';
+import './src/index.dart';
 void main() {
   runApp(App());
 }
@@ -22,7 +23,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       //定义整个页面
       debugShowCheckedModeBanner: false,
-      home: new Dio(),
+      home: new AppBarPage(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(0, 0, 255, 0.2), //定义水波纹的效果
@@ -32,7 +33,7 @@ class App extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           'router/new_page': (_) => new StaticNavigatorPage(),
           'router/new_page_with_callback': (_) => new StaticNavigatorPageWithResult()
-        }
+        },
     );
   }
 }
