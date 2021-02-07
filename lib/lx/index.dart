@@ -11,12 +11,12 @@ class Lx extends StatefulWidget {
 }
 class _ScaffoldRouteState extends State<Lx> {
   int _selectedIndex = 1;
-
+  int _num = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( //导航栏
-        title: Text("App Name"),
+        title: Text("App Name$_num"),
         actions: <Widget>[ //导航栏右侧菜单
           IconButton(icon: Icon(Icons.share), onPressed: () {}),
         ],
@@ -43,21 +43,24 @@ class _ScaffoldRouteState extends State<Lx> {
       _selectedIndex = index;
     });
   }
-  void _onAdd()async{
-    var response = await dio.post("http://dd-test.gcnao.cn/gateway/account/login",data:{
-        'username': '13751430001',
-        'password': 'a123456',
-        'accountType': 'PERSONAL',
-        'captchaType': 'PERSON_LOGIN',
-        'captcha': '1234',
+  void _onAdd(){
+    setState(() {
+      _num++;
     });
-    // var response = await dio.get("http://dd-test.gcnao.cn/gateway/account/login",data:{
-    //   'username': '13751430001',
-    //   'password': 'a123456',
-    //   'accountType': 'PERSONAL',
-    //   'captchaType': 'PERSON_LOGIN',
-    //   'captcha': '1234',
+    // var response = await dio.post("http://dd-test.gcnao.cn/gateway/account/login",data:{
+    //     'username': '13751430001',
+    //     'password': 'a123456',
+    //     'accountType': 'PERSONAL',
+    //     'captchaType': 'PERSON_LOGIN',
+    //     'captcha': '1234',
     // });
-    print(response);
+    // // var response = await dio.get("http://dd-test.gcnao.cn/gateway/account/login",data:{
+    // //   'username': '13751430001',
+    // //   'password': 'a123456',
+    // //   'accountType': 'PERSONAL',
+    // //   'captchaType': 'PERSON_LOGIN',
+    // //   'captcha': '1234',
+    // // });
+    // print(response);
   }
 }
