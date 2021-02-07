@@ -4,7 +4,7 @@ import './router/page2.dart';
 import './router/page3.dart';
 import './widgets/Home.dart'; //
 import './state/index.dart';
-import './lx/index.dart';
+import './lx/dio.dart';
 import './lifeCycle/index.dart';
 void main() {
   runApp(App());
@@ -22,7 +22,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       //定义整个页面
       debugShowCheckedModeBanner: false,
-      home: new LifeCycle(),
+      home: new Dio(),
       theme: ThemeData(
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(0, 0, 255, 0.2), //定义水波纹的效果

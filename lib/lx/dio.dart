@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
-Dio dio =  Dio();
+import '../apiHelper/Apihelper.dart';
 /*
 * 请求，未完成
 * todo
 * */
-class Lx extends StatefulWidget {
+class Dio extends StatefulWidget {
   @override
   _ScaffoldRouteState createState() => _ScaffoldRouteState();
 }
-class _ScaffoldRouteState extends State<Lx> {
+class _ScaffoldRouteState extends State<Dio> {
+  @override
+  void initState(){
+    super.initState();
+  }
+
   int _selectedIndex = 1;
   int _num = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar( //导航栏
-        title: Text("App Name$_num"),
+        title: Text("获取数据"),
         actions: <Widget>[ //导航栏右侧菜单
           IconButton(icon: Icon(Icons.share), onPressed: () {}),
         ],
@@ -44,23 +48,9 @@ class _ScaffoldRouteState extends State<Lx> {
     });
   }
   void _onAdd(){
+    getRequest();
     setState(() {
       _num++;
     });
-    // var response = await dio.post("http://dd-test.gcnao.cn/gateway/account/login",data:{
-    //     'username': '13751430001',
-    //     'password': 'a123456',
-    //     'accountType': 'PERSONAL',
-    //     'captchaType': 'PERSON_LOGIN',
-    //     'captcha': '1234',
-    // });
-    // // var response = await dio.get("http://dd-test.gcnao.cn/gateway/account/login",data:{
-    // //   'username': '13751430001',
-    // //   'password': 'a123456',
-    // //   'accountType': 'PERSONAL',
-    // //   'captchaType': 'PERSON_LOGIN',
-    // //   'captcha': '1234',
-    // // });
-    // print(response);
   }
 }
