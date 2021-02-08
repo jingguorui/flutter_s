@@ -16,7 +16,7 @@ class DongtaiRouter extends StatelessWidget {
               child: new Text("静态路由接收下一页返回值"),
               onPressed: () {
                 Navigator.of(context)
-                    .pushNamed('router/new_page_with_callback')
+                    .pushNamed('router/NavigationIndex/new_page_with_callback')
                     .then((value) {
                   showDialog(
                       context: context,

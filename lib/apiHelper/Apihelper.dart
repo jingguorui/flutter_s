@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-void getRequest() async{
+void getRequest(callback) async{
   Dio dio =  Dio();
   var header = {"Content-Type":"application/x-www-form-urlencoded"};
   var options = Options(headers:header);
@@ -10,6 +10,8 @@ void getRequest() async{
   if(response.statusCode == 200){
     var res = response.data;
     print("获取到的数据\n$res");
+    callback(res);
+    return res;
   }else{
     print("失败时获取到的数据\n$response.statusCode");
   }

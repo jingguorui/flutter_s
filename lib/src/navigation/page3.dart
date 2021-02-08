@@ -13,27 +13,27 @@ class Page3 extends StatelessWidget {
         ),
         body: new Center(
             child: new RaisedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      //_代表参数为空
-                        builder: (_) => new DynamicNaviattionPage(
-                          username: "xiedong1111",
+          onPressed: () {
+            Navigator.push(
+                context,
+                new MaterialPageRoute(
+                    //_代表参数为空
+                    builder: (_) => new DynamicNaviattionPage(
+                          username: "jingguorui",
                           password: "123456",
                         ))).then((value) {
-                  showDialog(
-                      context: context,
-                      child: new AlertDialog(
-                        content: new Text(value),
-                      ));
-                });
-              },
-              child: new Text("动态路由传参"),
-            )));
+//                           路由返回携带的参数
+              showDialog(
+                  context: context,
+                  child: new AlertDialog(
+                    content: new Text(value),
+                  ));
+            });
+          },
+          child: new Text("动态路由传参"),
+        )));
   }
 }
-
 
 class DynamicNaviattionPage extends StatelessWidget {
   var username;
@@ -53,7 +53,7 @@ class DynamicNaviattionPage extends StatelessWidget {
           children: <Widget>[
             new MaterialButton(
               onPressed: () {
-                Navigator.pop(context, "未查询到改该用户信息111");
+                Navigator.pop(context, "未查询到改该用户信息jingguorui");
               },
               child: new Text("点我返回"),
               color: Colors.lightGreen,

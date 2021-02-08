@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import './router/page1.dart';
-import './router/page2.dart';
-import './router/page3.dart';
-import './widgets/Home.dart'; //
-import './state/index.dart';
-import './lx/dio.dart';
-import './lifeCycle/index.dart';
+import './src/navigation/page1.dart';
+import './src/navigation/page2.dart';
+import './src/navigation/index.dart';
 import './src/index.dart';
+import './src/network/index.dart';
 void main() {
   runApp(App());
 }
@@ -31,8 +28,12 @@ class App extends StatelessWidget {
       ),
         // 静态路由注册
         routes: <String, WidgetBuilder>{
-          'router/new_page': (_) => new StaticNavigatorPage(),
-          'router/new_page_with_callback': (_) => new StaticNavigatorPageWithResult()
+          'router/NavigationIndex': (_) => new NavigationIndex(),
+          'router/NavigationIndex/notParams': (_) => new FlutterDemo(),
+          'router/NavigationIndex/Params': (_) => new DongtaiRouter(),
+          'router/NavigationIndex/new_page_with_callback': (_) => new StaticNavigatorPageWithResult(),
+          'router/NavigationIndex/new_page': (_) => new StaticNavigatorPage(),
+          'router/NetWork': (_) => new NetWorkPage(),
         },
     );
   }

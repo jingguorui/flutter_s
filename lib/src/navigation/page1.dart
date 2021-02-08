@@ -15,7 +15,7 @@ class FlutterDemo extends StatelessWidget {
               child: new Text("静态路由跳页"),
               onPressed: () {
                 Navigator.of(context)
-                    .pushNamed('router/new_page'); //这里一定要保证跳页的路由路径跟上面注册的路径一致
+                    .pushNamed('router/NavigationIndex/new_page'); //这里一定要保证跳页的路由路径跟上面注册的路径一致
               })),
     );
   }
