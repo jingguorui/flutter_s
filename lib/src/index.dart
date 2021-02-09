@@ -10,6 +10,7 @@ class AppBarPage extends StatefulWidget {
 
 class _ScaffoldRouteState extends State<AppBarPage> {
   List<Widget> pages = List<Widget>();
+  List titleArr = ['消息', '工作台', '个人信息'];
 
   @override
   void initState() {
@@ -18,7 +19,10 @@ class _ScaffoldRouteState extends State<AppBarPage> {
   }
 
   void addBottomNavigationBarItem() {
-    pages..add(new MessagePage())..add(new WorkBenchPage())..add(new UserInfoPage());
+    pages
+      ..add(new MessagePage())
+      ..add(new WorkBenchPage())
+      ..add(new UserInfoPage());
   }
 
   // 当前bottomNavigation下标
@@ -29,7 +33,7 @@ class _ScaffoldRouteState extends State<AppBarPage> {
     return Scaffold(
       appBar: AppBar(
         //导航栏
-        title: Text("主页面"),
+        title: Text(titleArr[_selectedIndex]),
         actions: <Widget>[
           //导航栏右侧菜单
           IconButton(icon: Icon(Icons.share), onPressed: () {}),

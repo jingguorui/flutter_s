@@ -9,23 +9,32 @@ class WorkBenchPage extends StatefulWidget {
 }
 
 class _State extends State<WorkBenchPage> {
+//  前往新的界面
+  void gotoNewPage(route) {
+    Navigator.of(context).pushNamed(route);
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(8),
       children: <Widget>[
         new ButtonBox('路由跳转相关页面', () {
-          Navigator.of(context).pushNamed('router/NavigationIndex');
+          gotoNewPage('router/NavigationIndex');
         }),
         new ButtonBox('使用dio请求相关数据', () {
-          Navigator.of(context).pushNamed('router/NetWork');
+          gotoNewPage('router/NetWork');
         }),
-        new ButtonBox('33', () {}),
+        new ButtonBox('生命周期', () {
+          gotoNewPage('router/lifeCycle');
+        }),
+        new ButtonBox('todoList', () {
+          gotoNewPage('router/todoList');
+        }),
       ],
     );
   }
 }
-
 
 // 自定义封装的组件
 class ButtonBox extends StatelessWidget {

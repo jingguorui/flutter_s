@@ -48,7 +48,7 @@ class _ScaffoldRouteState extends State<Dio> {
     });
   }
   void _onAdd(){
-    getRequest();
+    getRequest((){});
     setState(() {
       _num++;
     });

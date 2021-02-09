@@ -4,6 +4,8 @@ import './src/navigation/page2.dart';
 import './src/navigation/index.dart';
 import './src/index.dart';
 import './src/network/index.dart';
+import './src/lifeCycle/lifeCycle.dart';
+import './src/todoList/todoList.dart';
 void main() {
   runApp(App());
 }
@@ -34,6 +36,8 @@ class App extends StatelessWidget {
           'router/NavigationIndex/new_page_with_callback': (_) => new StaticNavigatorPageWithResult(),
           'router/NavigationIndex/new_page': (_) => new StaticNavigatorPage(),
           'router/NetWork': (_) => new NetWorkPage(),
+          'router/lifeCycle': (_) => new LifeCycle(),
+          'router/todoList': (_) => new TodoList(),
         },
     );
   }
