@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './work/message.dart';
 import './work/userInfo.dart';
 import './work/workBench.dart';
-
+import './drawer/drawer.dart';
 class AppBarPage extends StatefulWidget {
   @override
   _ScaffoldRouteState createState() => _ScaffoldRouteState();
@@ -40,7 +40,7 @@ class _ScaffoldRouteState extends State<AppBarPage> {
         ],
       ),
       body: pages[_selectedIndex],
-      drawer: new Text("111"), //抽屉
+      drawer: new Drawers(), //抽屉
       bottomNavigationBar: BottomNavigationBar(
         // 底部导航
         items: <BottomNavigationBarItem>[
