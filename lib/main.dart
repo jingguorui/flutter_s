@@ -24,7 +24,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: new AppBarPage(),
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.blue,
         highlightColor: Color.fromRGBO(0, 0, 255, 0.2), //定义水波纹的效果
         splashColor: Colors.blue, //定义tabbar点击时的背景效果
       ),
