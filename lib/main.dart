@@ -8,6 +8,7 @@ import './src/lifeCycle/lifeCycle.dart';
 import './src/todoList/todoList.dart';
 import './src/ReorderableListViewDemo/ReorderableListViewDemo.dart';
 import './src/login/loginPage.dart';
+import './src/animation_demo/index.dart';
 void main() {
   runApp(App());
 }
@@ -42,6 +43,7 @@ class App extends StatelessWidget {
           'router/todoList': (_) => new TodoList(),
           'router/ReorderableListViewDemo': (_) => new ReorderableListViewDemo(),
           'router/Login': (_) => new Login(),
+          'router/animation': (_) => new Animationss(),
         },
     );
   }

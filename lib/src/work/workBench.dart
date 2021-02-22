@@ -37,6 +37,9 @@ class _State extends State<WorkBenchPage> {
         new ButtonBox('登录', () {
           gotoNewPage('router/Login');
         }),
+        new ButtonBox('动画', () {
+          gotoNewPage('router/animation');
+        }),
       ],
     );
   }
