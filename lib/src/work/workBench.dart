@@ -34,6 +34,9 @@ class _State extends State<WorkBenchPage> {
         new ButtonBox('可拖动列表', () {
           gotoNewPage('router/ReorderableListViewDemo');
         }),
+        new ButtonBox('登录', () {
+          gotoNewPage('router/Login');
+        }),
       ],
     );
   }
