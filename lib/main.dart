@@ -6,6 +6,7 @@ import './src/index.dart';
 import './src/network/index.dart';
 import './src/lifeCycle/lifeCycle.dart';
 import './src/todoList/todoList.dart';
+import './src/ReorderableListViewDemo/ReorderableListViewDemo.dart';
 void main() {
   runApp(App());
 }
@@ -38,6 +39,7 @@ class App extends StatelessWidget {
           'router/NetWork': (_) => new NetWorkPage(),
           'router/lifeCycle': (_) => new LifeCycle(),
           'router/todoList': (_) => new TodoList(),
+          'router/ReorderableListViewDemo': (_) => new ReorderableListViewDemo(),
         },
     );
   }

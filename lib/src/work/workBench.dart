@@ -31,6 +31,9 @@ class _State extends State<WorkBenchPage> {
         new ButtonBox('todoList', () {
           gotoNewPage('router/todoList');
         }),
+        new ButtonBox('可拖动列表', () {
+          gotoNewPage('router/ReorderableListViewDemo');
+        }),
       ],
     );
   }
