@@ -40,6 +40,9 @@ class _State extends State<WorkBenchPage> {
         new ButtonBox('动画', () {
           gotoNewPage('router/animation');
         }),
+        new ButtonBox('redux', () {
+          gotoNewPage('router/redux');
+        }),
       ],
     );
   }
